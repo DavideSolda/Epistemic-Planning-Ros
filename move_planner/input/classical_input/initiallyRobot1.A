@@ -1,0 +1,15 @@
+initially free_gripper.
+
+initially on(orange,red).
+initially on(red,table).
+
+initially on(black,table).
+
+initially top(orange,1).
+initially top(black,2).
+initially top(table,3).
+
+initially height(1,2).
+initially height(2,1).
+initially height(3,0).
+

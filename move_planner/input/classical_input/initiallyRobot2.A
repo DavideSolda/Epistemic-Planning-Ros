@@ -1,0 +1,16 @@
+initially free_gripper.
+
+initially on(green,yellow).
+initially on(yellow,table).
+
+initially on(white,blue).
+initially on(blue,table).
+
+initially top(green,1).
+initially top(white,2).
+initially top(table,3).
+
+initially height(1,2).
+initially height(2,2).
+initially height(3,0).
+

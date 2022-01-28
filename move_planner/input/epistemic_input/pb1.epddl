@@ -1,0 +1,41 @@
+(define (problem pb1)
+  (:domain domain)
+  (:agents robot1 robot2)
+  (:objects
+    green yellow red - color
+  )
+  (:depth 3)
+  (:dynck false)
+  (:init
+         (ok)
+         (has_initially robot1 red)
+         (has_initially robot2 yellow)
+	 
+	 ([robot1 robot2](not (occupied_by robot1 green)))
+	 ([robot1 robot2](not (occupied_by robot1 yellow)))
+	 ([robot1 robot2](not (occupied_by robot1 red)))
+
+         ([robot1 robot2](not (occupied_by robot2 green)))
+	 ([robot1 robot2](not (occupied_by robot2 yellow)))
+	 ([robot1 robot2](not (occupied_by robot2 red)))
+
+	 (not (occupied_by robot1 green))
+	 (not (occupied_by robot1 yellow))
+	 (not (occupied_by robot1 red))
+
+         (not (occupied_by robot2 green))
+	 (not (occupied_by robot2 yellow))
+	 (not (occupied_by robot2 red))
+
+  )
+  (:goal ([robot1](has_initially robot2 yellow))
+
+         ([robot1](not (occupied_by robot1 green)))
+	 ([robot1](not (occupied_by robot1 yellow)))
+	 ([robot1](not (occupied_by robot1 red)))
+
+         ([robot1](not (occupied_by robot2 green)))
+	 ([robot1](not (occupied_by robot2 yellow)))
+	 ([robot1](not (occupied_by robot2 red)))
+  )
+)

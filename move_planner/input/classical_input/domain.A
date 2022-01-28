@@ -1,0 +1,22 @@
+X of type block.
+Y of type block.
+H of type h.
+W of type place.
+
+executable pick(X,Y,H,W) if top(X,W), on(X,Y), height(W,H), free_gripper.
+
+executable pick_from_barrier(X) if barrier(X), free_gripper.
+
+executable put(X,Y,H,W) if gripped(X), top(Y,W), height(W,H-1), neg free_gripper.
+
+executable put_on_barrier(X) if gripped(X), free_barrier, neg free_gripper.
+
+
+
+pick(X,Y,H,W) causes gripped(X), neg height(W, H), height(W, H-1), neg free_gripper, neg top(X,W).
+pick(X,Y,H,W) causes top(Y,W), neg on(X,Y) if on(X,Y).
+pick_from_barrier(X) causes gripped(X), neg free_gripper, free_barrier, barrier(X).
+
+put(X,Y,H,W) causes neg top(Y,W), on(X,Y) if top (Y,W).
+put(X,Y,H,W) causes top(X,W), neg height(W,H-1), height(W,H), free_gripper, neg gripped(X).
+put_on_barrier(X) causes free_gripper, neg gripped(X), neg free_barrier, barrier(X).
