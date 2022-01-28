@@ -1,0 +1,10 @@
+initially barrier(yellow).
+initially top(blue,2).
+initially free_barrier.
+initially hight(2,1).
+initially hight(3,0).
+initially free_gripper.
+initially hight(1,3).
+initially on(yellow,green).
+initially on(green,red).
+initially top(yellow,1)).
