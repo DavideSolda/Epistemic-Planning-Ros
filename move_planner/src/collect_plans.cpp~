@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+  //generate the EFP istance:
+  system("python EpistemicPlanning/architecture.py EpistemicPlanning/Input/blocks/blocks_domain.epddl EpistemicPlanning/Input/blocks/pb1.epddl EpistemicPlanning/Input/context/contextEx.epddl");
+
+  //launch the EFP solver:
+  system("./EpistemicPlanning/ExternalPrograms/EFP/bin/efp Output/EFP/blocks_pb1.tmp");
+  
+}
