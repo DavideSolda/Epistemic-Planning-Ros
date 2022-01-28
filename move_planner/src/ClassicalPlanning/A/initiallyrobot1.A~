@@ -1,9 +1,0 @@
-initially free_gripper.
-initially free_barrier.
-initially on(green,yellow).
-initially top(green,1).
-initially top(red,2).
-initially hight(1,2).
-initially hight(2,1).
-initially hight(3,0).
-

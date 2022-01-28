@@ -1,8 +1,0 @@
-initially top(white,2).
-initially on(white,blue).
-initially hight(1,0).
-initially hight(2,2).
-initially hight(3,1).
-initially free_gripper.
-initially top(green,3).
-initially barrier(yellow).
