@@ -1,0 +1,57 @@
+{
+    "size_limit": 100,
+    "cases": {
+        "1": {
+            "domain_name": "coininthebox",
+            "problem_name": "pb2",
+            "planner": 2,
+            "complexity": 2304,
+            "time_taken": 0.0024353,
+            "init": [
+                "tail",
+                "has_key a",
+                "looking a",
+                "[a b c](has_key a)",
+                "[a b c](not (has_key b))",
+                "[a b c](not (has_key c))",
+                "[a b c](not (opened))",
+                "[a b c](looking a)",
+                "[a b c](not (looking b))",
+                "[a b c](not (looking c))"
+            ],
+            "goal": [
+                "[a](tail)"
+            ],
+            "plan": [
+                "open_a",
+                "peek_a"
+            ]
+        },
+        "2": {
+            "domain_name": "coininthebox",
+            "problem_name": "pb2",
+            "planner": 2,
+            "complexity": 2304,
+            "time_taken": 0.0023512,
+            "init": [
+                "tail",
+                "has_key a",
+                "looking a",
+                "[a b c](has_key a)",
+                "[a b c](not (has_key b))",
+                "[a b c](not (has_key c))",
+                "[a b c](not (opened))",
+                "[a b c](looking a)",
+                "[a b c](not (looking b))",
+                "[a b c](not (looking c))"
+            ],
+            "goal": [
+                "[a](tail)"
+            ],
+            "plan": [
+                "open_a",
+                "peek_a"
+            ]
+        }
+    }
+}

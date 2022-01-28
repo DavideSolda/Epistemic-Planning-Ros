@@ -1,0 +1,32 @@
+EFP version 2.0 - Built date: Mon Oct  4 11:15:05 CEST 2021
+
+Building agent list...
+
+Building fluent literals...
+
+Building action list...
+
+Adding propositions to actions...
+
+Adding to pointed world and initial conditions...
+
+Building attitudes table...
+
+Adding to Goal...
+
+Building initial possibility...
+
+Initial Built in 0.117487 seconds
+
+
+
+Well Done, Goal found in 4.30657 :)
+
+Plan Length: 3
+
+Executed actions: peek_robot2, pspb_robot2_yellow, pbps_robot1_robot2_yellow
+completed the search in 4.30657
+
+
+
+*****THE END*****

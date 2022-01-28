@@ -1,0 +1,44 @@
+(define (domain blocks)
+  (:requirements :strips :typing :negative-preconditions :mep)
+  (:predicates (has_initially ?ag - agent ?c - color)
+               (occupied_by ?ag - agent ?c - color)
+  )
+  (:types
+    color - object
+  )
+
+  (:action peek
+    :act_type sensing
+    :parameters (?ag - agent ?c - color)
+    :precondition (and (has_initially ?ag ?c))
+    :effect (and (has_initially ?ag ?c))
+    :observers	(?ag)
+  )
+  
+  (:action p_s_and_p_b
+    :act_type ontic
+    :parameters (?ag - agent ?c - color)
+    :precondition (and   (not (occupied_by robot1 green))
+	                 (not (occupied_by robot1 yellow))
+                 	 (not (occupied_by robot1 red))
+                         (not (occupied_by robot2 green))
+	                 (not (occupied_by robot2 yellow))
+	                 (not (occupied_by robot2 red))
+                  )
+    :effect (and (occupied_by ?ag ?c)
+                 (has_initially ?ag ?c)
+            )
+    :observers	(forall (?ag2 - agent) (?ag2))
+  )
+
+  (:action p_b_and_p_s
+    :act_type ontic
+    :parameters (?ag ?ag2 - agent ?c - color)
+    :precondition (and (occupied_by ?ag2 ?c)
+                  )
+    :effect (and (not (occupied_by ?ag2 ?c))
+	    )
+    :observers	(forall (?ag3 - agent) (?ag3))
+  )
+
+)
